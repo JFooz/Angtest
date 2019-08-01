@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" id="photo" src="{{eleve.imgProfil}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{eleve.nom}} {{eleve.prenom}}</h5>
+    <p class="card-text" *ngIf="estAfficher">{{eleve.citation}}</p>
+    <a (click)="afficherDetail()"  class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
