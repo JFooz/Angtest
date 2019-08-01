@@ -9,6 +9,8 @@ import { EleveDetailComponent } from './components/eleve-detail/eleve-detail.com
 import { MenuComponent } from './components/menu/menu.component';
 import { ListeSeanceComponent } from './components/liste-seance/liste-seance.component';
 import { FormSeanceComponent } from './components/form-seance/form-seance.component';
+import { AppRoutingModule } from './app-routing-module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FormSeanceComponent } from './components/form-seance/form-seance.compon
   imports: [
     BrowserModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
