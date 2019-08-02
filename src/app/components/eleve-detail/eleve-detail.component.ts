@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/_services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-eleve-detail',
@@ -7,21 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EleveDetailComponent implements OnInit {
 
+  isLoaded = false;
+  eleve: any;
   estAfficher = false;
-  eleve = {
-    prenom: 'Faouzi',
-    nom: 'Yekhlef',
-    imgProfil: '/../assets/images/812a33c1631476b1a8726c7988827093.jpg',
-    citation : "mes couilles sur ton front"
-  };
+  userId: string;
 
-  constructor() { }
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.userId = this.route.snapshot.paramMap.get('id');
+    this.userService.getUserById(+this.userId).subscribe(res => {
+      this.eleve = res;
+      this.isLoaded = true;
+      console.log(this.eleve);
+    }, err => {
+      console.log(err);
+    });
   }
 
   afficherDetail() {
-    
+
     /**
      * if (this.estAfficher) {
         this.estAfficher = false;

@@ -12,4 +12,10 @@ export class FormSeanceComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(form) {
+    console.log(form.value.titre);
+    console.log(form.value.note);
+    console.log(form.value.date);
+  }
+
 }

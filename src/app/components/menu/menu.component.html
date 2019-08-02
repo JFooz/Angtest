@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['/eleve']">Navbar</a>
+  <a class="navbar-brand" [routerLink]="['/accueil']">Accueil</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -9,6 +9,9 @@
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['/eleve']">Menu <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/eleve']">Elève</a>
+        </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/seances']">Séances</a>
       </li>
@@ -21,8 +24,6 @@
 <div>
   <div class="fluid">
     <div class="row">
-      <app-eleve-detail></app-eleve-detail>
-      <app-liste-seance></app-liste-seance>
       
     </div>
 

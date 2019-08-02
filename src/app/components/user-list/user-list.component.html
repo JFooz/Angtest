@@ -1,0 +1,12 @@
+<div class="card-group">
+  <div class="card" style="width: 18rem;" *ngFor="let eleve of userList">
+    <div class="card-body">
+      <h5 class="card-title">{{eleve.lastname}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{eleve.firstname}}</h6>
+      <p class="card-text">{{eleve.address.nbrStreet}} {{eleve.address.street}} {{eleve.address.city}}
+        {{eleve.address.zipCode}} </p>
+      <a class="card-link">{{eleve.address.zipCode}}</a>
+      <a class="card-link">{{eleve.address.country}}</a>
+    </div>
+  </div>
+</div>
